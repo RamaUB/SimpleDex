@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleDEX</title>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Información del Pool</h2>
+        <p id="balanceA">Balance TKA: Cargando...</p>
+        <p id="balanceB">Balance TKB: Cargando...</p>
+        <!--
+        <p><strong>TKA en Pool:</strong> <span id="balanceTokenA">0</span></p> 
+        <p><strong>TKB en Pool:</strong> <span id="balanceTokenB">0</span></p>
+        <p><strong>Precio (TKA -> TKB):</strong> <span id="price">-</span></p> 
+        -->
+        <button id="refreshData">Actualizar Datos</button>
+    </div>
+    
+    <div class="container">
+        <h1>SimpleDEX</h1>
+        <p>Interactúa con el contrato SimpleDEX y realiza operaciones de intercambio y liquidez.</p>
+
+        <section id="wallet-connect">
+            <button id="connectWallet">Conectar Wallet</button>
+            <p id="walletAddress">No conectado</p>
+        </section>
+
+        <section id="liquidity">
+            <h2>Agregar Liquidez</h2>
+            <input type="number" id="amountA" placeholder="Cantidad de TokenA" />
+            <input type="number" id="amountB" placeholder="Cantidad de TokenB" />
+            <button id="addLiquidity">Agregar Liquidez</button>
+        </section>
+
+        <section id="swap">
+            <h2>Intercambiar Tokens</h2>
+            <input type="number" id="swapAmount" placeholder="Cantidad a intercambiar" />
+            <button id="swapAforB">Intercambiar A por B</button>
+            <button id="swapBforA">Intercambiar B por A</button>
+        </section>
+
+        <section id="remove-liquidity">
+            <h2>Quitar Liquidez</h2>
+            <input type="number" id="removeAmountA" placeholder="Cantidad de TokenA" />
+            <input type="number" id="removeAmountB" placeholder="Cantidad de TokenB" />
+            <button id="removeLiquidity">Quitar Liquidez</button>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
